@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios PHP | Clase 2</title>
+
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="text-center">Ejemplos - Estructura Repetitivas y Arreglos - Clase 2</h2>
+    </header>
+
+    <main>
+      <div id="ejemplo1">
+        <h1 class="ejercicio-titulo">MIENTRAS «WHILE»</h1>
+        <div >
+          <p>
+            La estructura repetitiva <strong> MIENTRAS «WHILE» </strong>, esta permitirá ejecutar una lista de instrucciones 
+            siempre que la condición de control sea verdadera.
+            Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              while ($variable_control) { <br />
+                <ul>
+                  <li>INSTRUCION 1</li>
+                  <li>INSTRUCION 2</li>
+                  <li>INSTRUCION 3</li>
+                  <li>INSTRUCION 4</li>
+                  <li>INSTRUCION 5</li>
+                </ul>
+              }
+            </blockquote>
+          </p>
+          <h1 class="ejercicio-titulo">Ejemplo 1 </h1>
+          <p>
+            Calcular e imprimir la tabla de multiplicar de un número cualquiera. 
+            Imprimir el multiplicando, el multiplicador y el producto. Utilizando la estructura «WHILE»
+          </p>
+          Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              $numero = $_POST['numero']; <br />
+
+              $i = 1; <br />
+              echo "La tabla de multiplicar de número $numero ";<br />
+              while ($i <= 10) <br />{<br />
+                  echo "$numero x $i = " . $numero * $i; <br />
+                  $i++;<br />
+              }
+            </blockquote>
+          <p>
+            <div  class="frame">
+              <form action="Ejemplos/Ejercicio1.php" method="post" class="formulario">
+                <div class="formulario-contenedor">
+                  <label class="formulario-label" for="numero">
+                    Ingrese Un Número entre 1 y 100
+                  </label>
+                  <input class="formulario-input" type="number" min="1" max="100" step="1" name="numero" required/>
+                  <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                </div>
+              </form>
+            </div>
+          </p>
+        </div>
+      </div>
+
+      <div id="ejemplo2">
+        <h1 class="ejercicio-titulo">HACER MIENTRAS «DO ..... WHILE»</h1>
+        <div >
+          <p>
+            La estructura repetitiva <strong> HACER MIENTRAS «DO ...... WHILE» </strong>, esta permitirá ejecutar una lista de instrucciones 
+            siempre que la condición de control sea verdadera. Cumple la misma función que la estructura «WHILE», solo que la condición de control se 
+            evalua al final del bloque de código, garantizando que se ejecute al menos 1 vez las intrucciones.
+            Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              do { <br />
+                <ul>
+                  <li>INSTRUCION 1</li>
+                  <li>INSTRUCION 2</li>
+                  <li>INSTRUCION 3</li>
+                  <li>INSTRUCION 4</li>
+                  <li>INSTRUCION 5</li>
+                </ul>
+              } while ($variable_control);
+            </blockquote>
+          </p>
+          <h1 class="ejercicio-titulo">Ejemplo 2 </h1>
+          <p>
+            Calcular e imprimir la tabla de multiplicar de un número cualquiera. 
+            Imprimir el multiplicando, el multiplicador y el producto. Utilizando la estructura «DO ...... WHILE»
+          </p>
+          Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              $numero = $_POST['numero']; <br />
+
+              $i = 1; <br />
+              echo "La tabla de multiplicar de número $numero ";<br />
+              do <br />{<br />
+                  echo "$numero x $i = " . $numero * $i; <br />
+                  $i++;<br />
+              }while ($i <= 10);
+            </blockquote>
+          <p>
+            <div  class="frame">
+              <form action="Ejemplos/Ejercicio2.php" method="post" class="formulario">
+                <div class="formulario-contenedor">
+                  <label class="formulario-label" for="numero">
+                    Ingrese Un Número entre 1 y 100
+                  </label>
+                  <input class="formulario-input" type="number" min="1" max="100" step="1" name="numero" required/>
+                  <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                </div>
+              </form>
+            </div>
+          </p>
+        </div>
+      </div>
+
+      <div id="ejemplo3">
+        <h1 class="ejercicio-titulo">PARA «FOR»</h1>
+        <div >
+          <p>
+            La estructura repetitiva <strong> PARA «FOR» </strong>, esta permitirá ejecutar una lista de instrucciones, pero su 
+            ejecución depende del valor de la variable de control. Podría decirse que es la versión "automática" de las anteriores.
+            
+            Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              for ($variable_control = valor_inicial; $variable_control <= valor_final; $viarable_control++ ) { <br />
+                <ul>
+                  <li>INSTRUCION 1</li>
+                  <li>INSTRUCION 2</li>
+                  <li>INSTRUCION 3</li>
+                  <li>INSTRUCION 4</li>
+                  <li>INSTRUCION 5</li>
+                </ul>
+              } 
+            </blockquote>
+          </p>
+          <h1 class="ejercicio-titulo">Ejemplo 3 </h1>
+          <p>
+            Calcular e imprimir la tabla de multiplicar de un número cualquiera. 
+            Imprimir el multiplicando, el multiplicador y el producto. Utilizando la estructura «FOR»
+          </p>
+          Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              $numero = $_POST['numero']; <br />
+              echo "La tabla de multiplicar de número $numero ";<br />
+              for ($i = 1; $i <= 10; $i++ )   <br />{<br />
+                  echo "$numero x $i = " . $numero * $i; <br />
+              }
+            </blockquote>
+          <p>
+            <div  class="frame">
+              <form action="Ejemplos/Ejercicio3.php" method="post" class="formulario">
+                <div class="formulario-contenedor">
+                  <label class="formulario-label" for="numero">
+                    Ingrese Un Número entre 1 y 100
+                  </label>
+                  <input class="formulario-input" type="number" min="1" max="100" step="1" name="numero" required/>
+                  <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                </div>
+              </form>
+            </div>
+          </p>
+        </div>
+      </div>
+      
+      <div id="ejemplo4">
+        <h1 class="ejercicio-titulo">ARREGLOS «ARRAYS»</h1>
+        <div >
+          <p>
+            Los arreglos, también conocido como vectores o arrays, es un tipo de dato estructurado, ya que 
+            puede contener una colección de valores. Para acceder a algún valor de esa colección, se utiliza una 
+            variable que cumple el rol de indice o posición. Existe 2 formas de declarar una variable
+            del tipo array.
+            Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+            Primera Forma: <strong> $variable = array(valor1, valor2, valor3, ..... valorN);</strong><br /><br />
+            Segunda Forma: <strong> $variable = [valor1, valor2, valor3, ..... valorN];</strong><br /><br />
+
+            </blockquote>
+          </p>
+          <h1 class="ejercicio-titulo">Ejemplo 4 </h1>
+          <p>
+            Calcular el peso promedio de un grupo de 20 personas. Se debe asignar en un arreglo los valores de 
+            los pesos de cada uno. Esos valores son aleatorios entre 42 y 124.
+
+            Imprimir el peso total del grupo y el promedio.
+          </p>
+          Sintaxis:
+            <blockquote class="quote-box quote-left-border">
+              
+              echo "Calcular el peso promedio de 20 personas ";<br />
+
+              for ($i = 0; $i < 20; $i++) {<br />
+                  $pesos[$i] = rand(42, 124);<br />
+                  echo "Peso de la persona nro. $i ---> $pesos[$i] "; <br />
+              }<br /><br />
+
+              $suma = 0;<br /><br />
+
+              foreach ($pesos as $peso) {<br />
+                $suma+=$peso;<br />
+              }<br /><br />
+              
+              echo "El peso total de las 20 personas es $suma";<br />
+              echo "El peso promedio de las 20 personas es " . $suma/20;<br />
+
+            </blockquote>
+          <p>
+            <div  class="frame">
+              <form action="Ejercicios/Ejercicio2.php" method="post" class="formulario">
+                <div class="formulario-contenedor">
+                  <label class="formulario-label" for="montoDeCompra">
+                    Solo presione el botón para ver el resultado
+                  </label>
+                  <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                </div>
+              </form>
+            </div>
+          </p>
+        </div>
+      </div>
+      
+      <div id="ejercicio1">
+        <h1 class="ejercicio-titulo">Ejercicio 1</h1>
+        <div>
+          <p>
+            Generar 20 números aleatorios entre 1 y 100 y determinar e imprimir cuantos 
+            están entre 1-20, 21-70 y 71-100.
+          </p>
+          <p>
+            <div  class="frame">
+              <form action="Ejercicios/Ejercicio1.php" method="post" class="formulario">
+                <div class="formulario-contenedor">
+                  <label class="formulario-label" for="montoDeCompra">
+                    Solo presione el botón para ver el resultado
+                  </label>
+                  <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                </div>
+              </form>
+            </div>
+          </p>
+        </div>
+      </div>
+
+
+    </main>
+  </body>
+</html>
