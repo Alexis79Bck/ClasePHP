@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios PHP | Clase 3</title>
+
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="text-center">Clase 3</h2>
+    </header>
+
+    <main>
+        <div id="ejemplo1">
+          <h1 class="ejercicio-titulo">EJERCICIO 1</h1>
+          <div >
+            <p>
+              Dado 2 números y seleccionado una operación aritmética, calcular dicha operación
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="calcula.php" method="post" class="formulario">
+                  <div class="formulario-contenedor">
+                    <label class="formulario-label" for="num1">
+                      Ingrese el Valor del 1er. Número
+                    </label>
+                    <input class="formulario-input" type="number" min="1" step="1" name="num1" required/>
+                    <label class="formulario-label" for="num1">
+                        Ingrese el Valor del 2do. Número
+                      </label>
+                      <input class="formulario-input" type="number" min="1" step="1" name="num2" required/>
+                      <label class="formulario-label" for="operacion">
+                        Seleccione el Sexo
+                      </label>
+                      <select name="operacion" required>
+                        <option value="suma">Sumar</option>
+                        <option value="resta">Restar</option>
+                        <option value="multiplica">Multiplicar</option>
+                        <option value="divide">Dividir</option>
+                      </select>
+                    <input class="formulario-boton-ejecutar" type="submit" value="Calcular" />
+                  </div>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
+
+        
+    </main>
+</body>
+</html>
