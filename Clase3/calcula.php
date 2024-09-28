@@ -24,10 +24,10 @@
       case 'divide':
         if ($num2 != 0) {
           $resultado = $num1 / $num2;          
-          $simbolo = "/";
         }else{
           $mensaje = "ERROR. División entre 0";
         }
+        $simbolo = "/";
         break;
     }
   }
@@ -55,19 +55,18 @@
       <div>
         <h1 class="ejercicio-titulo">RESULTADO</h1>
         <div >
-          <p>
-            <blockquote class="quote-box quote-left-border">
-              
-              OPERACION: <?php echo strtoupper($operacion) ?> <br />
-
-                
-                <ul>
-                  <li>1er. NUMERO ---> <?php echo $num1 . " " . $simbolo ?> </li>
-                  <li>2do. NUMERO ---> <?php echo $num2  ?></li>
-                  <li>-----------</li>
-                  <li><?php echo $resultado ?></li>
-                </ul>
-              
+          <blockquote class="quote-box quote-left-border">
+            OPERACION: <?php echo strtoupper($operacion) ?> <br />
+            <ul>
+              <li>1er. NUMERO ---> <?php echo $num1 . " " . $simbolo ?> </li>
+              <li>2do. NUMERO ---> <?php echo $num2  ?></li>
+              <li>-----------</li>
+              <?php if ($mensaje != null && $operacion == "divide") { ?>
+                <li><?php echo $mensaje ?></li>
+              <?php }else{ ?>
+                <li><?php echo $resultado ?></li>
+              <?php } ?>
+              </ul>              
             </blockquote>
           </p>
           

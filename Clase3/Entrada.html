@@ -22,20 +22,20 @@
             </p>
             <p>
               <div  class="frame">
-                <form action="calcula.php" method="post" class="formulario">
+                <form action="Calcula.php" method="post" class="formulario">
                   <div class="formulario-contenedor">
                     <label class="formulario-label" for="num1">
                       Ingrese el Valor del 1er. Número
                     </label>
-                    <input class="formulario-input" type="number" min="1" step="1" name="num1" required/>
+                    <input class="formulario-input" type="number"  name="num1" required/>
                     <label class="formulario-label" for="num1">
                         Ingrese el Valor del 2do. Número
                       </label>
-                      <input class="formulario-input" type="number" min="1" step="1" name="num2" required/>
+                      <input class="formulario-input" type="number" name="num2" required/>
                       <label class="formulario-label" for="operacion">
-                        Seleccione el Sexo
+                        Seleccione la operacion
                       </label>
-                      <select name="operacion" required>
+                      <select class="formulario-input" name="operacion" required>
                         <option value="suma">Sumar</option>
                         <option value="resta">Restar</option>
                         <option value="multiplica">Multiplicar</option>
@@ -48,6 +48,48 @@
             </p>
           </div>
         </div>
+
+        <div id="ejemplo2">
+            <h1 class="ejercicio-titulo">EJERCICIO 2</h1>
+            <div >
+              <p>
+                Sumar los elementos de de un arreglo
+              </p>
+              <p>
+                <div  class="frame">
+                  <form action="SumarElementos.php" method="post" class="formulario">
+                    <div class="formulario-contenedor">
+                      <label class="formulario-label" for="num1">
+                        Solo presione el botón para ver el resultado
+                      </label>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                    </div>
+                  </form>
+                </div>
+              </p>
+            </div>
+          </div>
+
+        <div id="ejemplo3">
+            <h1 class="ejercicio-titulo">EJERCICIO 3</h1>
+            <div >
+              <p>
+                Encontrar el número mayor de un arreglo
+              </p>
+              <p>
+                <div  class="frame">
+                  <form action="EncontrarNumeroMayor.php" method="post" class="formulario">
+                    <div class="formulario-contenedor">
+                        <label class="formulario-label" for="num1">
+                            Solo presione el botón para ver el resultado
+                        </label>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Calcular" />
+                    </div>
+                  </form>
+                </div>
+              </p>
+            </div>
+          </div>
 
         
     </main>
