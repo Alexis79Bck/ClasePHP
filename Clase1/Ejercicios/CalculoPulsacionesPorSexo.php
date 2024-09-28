@@ -1,5 +1,9 @@
 <?php 
 
+echo "<br />";
+echo '<a href="../index.html#ejercicio4"> Regresar </a>';
+echo "<br />";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $edad = $_POST['edad'];
@@ -15,9 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;    
     }
     
-    echo "<br />";
-    echo '<a href="../../index.html#ejercicio4"> Regresar </a>';
-    echo "<br />";
     echo "<br />";
     echo "Genero: $genero ";
     echo "<br />";

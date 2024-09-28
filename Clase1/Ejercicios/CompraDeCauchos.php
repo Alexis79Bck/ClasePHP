@@ -1,14 +1,15 @@
 <?php 
 
+echo "<br />";
+echo '<a href="../index.html#ejercicio3"> Regresar </a>';
+echo "<br />";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $cantidadDeCauchos = $_POST['cantidad'];
     $precio = $cantidadDeCauchos < 5 ? 800 : 700;
     $montoTotal = $cantidadDeCauchos < 5 ? $cantidadDeCauchos * 800 : $cantidadDeCauchos * 700;
         
-    echo "<br />";
-    echo '<a href="../../index.html#ejercicio3"> Regresar </a>';
-    echo "<br />";
     echo "<br />";
     echo "Cantidad de Cauchos: $cantidadDeCauchos ";
     echo "<br />";

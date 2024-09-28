@@ -1,4 +1,7 @@
 <?php
+echo "<br />";
+echo '<a href="../index.html#ejemplo2"> Regresar </a>';
+echo "<br />";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -13,7 +16,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }while ($i <= 10); 
 
 
-    echo "<br />";
-    echo '<a href="../index.html#ejemplo2"> Regresar </a>';
-    echo "<br />";
 }

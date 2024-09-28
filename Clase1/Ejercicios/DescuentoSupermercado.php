@@ -1,5 +1,9 @@
 <?php 
 
+echo "<br />";
+echo '<a href="../index.html#ejercicio1"> Regresar </a>';
+echo "<br />";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $tipoDeDescuento = [
@@ -24,9 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
     }
     
-    echo "<br />";
-    echo '<a href="../../index.html#ejercicio1"> Regresar </a>';
-    echo "<br />";
     echo "<br />";
     echo "El Monto de la Compra Fue: $montoDeCompra";
     echo "<br />";

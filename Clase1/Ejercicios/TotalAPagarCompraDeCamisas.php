@@ -1,5 +1,9 @@
 <?php 
 
+echo "<br />";
+echo '<a href="../index.html#ejercicio2"> Regresar </a>';
+echo "<br />";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $tipoDeDescuento = [
@@ -16,9 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $descuento = $montoTotalCamisasCompradas * $tipoDeDescuento[1];
         $descuentoObtenido = "20%";
     }
-    echo "<br />";
-    echo '<a href="../../index.html#ejercicio2"> Regresar </a>';
-    echo "<br />";
     echo "<br />";
     echo "Cantidad de Camisas Compradas: $cantidadCamisasComprada ";
     echo "<br />";
