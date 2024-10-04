@@ -14,7 +14,7 @@
     </header>
 
     <main>
-        <div id="ejemplo1">
+        <div id="ejercicio1">
           <h1 class="ejercicio-titulo">EJERCICIO 1</h1>
           <div >
             <p>
@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <div id="ejemplo2">
+        <div id="ejercicio2">
             <h1 class="ejercicio-titulo">EJERCICIO 2</h1>
             <div >
               <p>
@@ -128,7 +128,7 @@
             </div>
         </div>
 
-        <div id="ejemplo3">
+        <div id="ejercicio3">
             <h1 class="ejercicio-titulo">EJERCICIO 3</h1>
             <div >
               <p>
@@ -212,7 +212,7 @@
             </div>
         </div>
 
-        <div id="ejemplo3">
+        <div id="ejercicio4">
           <h1 class="ejercicio-titulo">EJERCICIO 4</h1>
           <div >
             <p>
@@ -240,8 +240,83 @@
               </div>
             </p>
           </div>
-      </div>
+        </div>
 
+        <div id="ejercicio5">
+          <h1 class="ejercicio-titulo">EJERCICIO 5</h1>
+          <div >
+            <p>
+              En una empresa se requiere calcular el salario semanal de cada uno de los n obreros que laboran en ella. 
+              Los nombres están en un arreglo y Las horas están en otro. (Arreglos paralelas)
+              El salario se obtiene de la siguiente forma: 
+                * Si el obrero trabaja 40 horas o menos se le paga Bs. 20 por hora. 
+                * Si trabaja más de 40 horas se le paga Bs. 20 por cada una de las primeras 40 horas y Bs. 25 por cada hora extra. 
+              
+                Imprime el nombre de cada trabajador y cuánto va a cobrar.
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="Ejercicios/CalcularSalarioTrabajadores.php" method="post" class="formulario">
+                  <div class="formulario-contenedor">
+                    <p>
+                    <label class="formulario-label"></label>
+                      Ingrese Valor de Cada Hora Trabajada (en Bs.):
+                    </label>
+                    <input class="formulario-input" type="number"  name="valorXHora" required/>
+                  </p>
+                    <label class="formulario-label">
+                      Ingrese Nombres y las Horas Trabajas en la Semana:
+                    </label>
+                    <ul>
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[0]" required/>
+                          <input class="formulario-input" type="number"  name="horas[0]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[1]" required/>
+                          <input class="formulario-input" type="number"  name="horas[1]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[2]" required/>
+                          <input class="formulario-input" type="number"  name="horas[2]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[3]" required/>
+                          <input class="formulario-input" type="number"  name="horas[3]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[4]" required/>
+                          <input class="formulario-input" type="number"  name="horas[4]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[5]" required/>
+                          <input class="formulario-input" type="number"  name="horas[5]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[6]" required/>
+                          <input class="formulario-input" type="number"  name="horas[6]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[7]" required/>
+                          <input class="formulario-input" type="number"  name="horas[7]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[8]" required/>
+                          <input class="formulario-input" type="number"  name="horas[8]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[9]" required/>
+                          <input class="formulario-input" type="number"  name="horas[9]" required/>
+                        </li> 
+                        
+                    </ul>
+                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                  </div>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
         
     </main>
 </body>
