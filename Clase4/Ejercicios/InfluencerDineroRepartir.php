@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <header>
-        <h2 class="text-center">Clasificar las Edades de 20 Personas</h2>
+        <h2 class="text-center">Dinero A Repartir por Influencer</h2>
     </header>
 
     <main>
