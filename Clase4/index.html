@@ -132,22 +132,115 @@
             <h1 class="ejercicio-titulo">EJERCICIO 3</h1>
             <div >
               <p>
-                Encontrar el número mayor de un arreglo
+                Dado un arreglo con 20 calificaciones de un grupo de alumnos. Calcule y escriba el porcentaje de reprobados. 
+                Tomando en cuenta que la calificación mínima aprobatoria es de 70.
               </p>
               <p>
                 <div  class="frame">
-                  <form action="EncontrarNumeroMayor.php" method="post" class="formulario">
+                  <form action="Ejercicios/CalificacionesAlumnos.php" method="post" class="formulario">
                     <div class="formulario-contenedor">
-                        <label class="formulario-label" for="num1">
-                            Solo presione el botón para ver el resultado
-                        </label>
-                      <input class="formulario-boton-ejecutar" type="submit" value="Calcular" />
+                      <label class="formulario-label" for="notas">
+                        Registre las 20 notas:
+                      </label>
+                      <ul>
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[0]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[1]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[2]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[3]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[4]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[5]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[6]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[7]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[8]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[9]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[10]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[11]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[12]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[13]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[14]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[15]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[16]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[17]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[18]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[19]" required/>
+                          </li> 
+                      </ul>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
                     </div>
                   </form>
                 </div>
               </p>
             </div>
+        </div>
+
+        <div id="ejemplo3">
+          <h1 class="ejercicio-titulo">EJERCICIO 4</h1>
+          <div >
+            <p>
+              Un INFLUENCER dispone de una cantidad de euros que quiere repartir a un conjunto de personas. 
+              A cada persona le da una cantidad de dinero proporcional a la edad de la misma. Por ejemplo, 
+              si una persona tiene 17 años recibirá € 170 y si tiene 32 años recibirá € 320. 
+              Genere la edad de manera aleatoria entre 1 y 100.
+              Escribir un programa que devuelva el número de personas que podrán recibir una cantidad de dinero. 
+              Cuando la cantidad de dinero ya no es suficiente para dársela a una persona, suponemos que 
+              no existen más personas y que por tanto el programa finaliza y nos dice cuánto dinero le 
+              quedó al INFLUENCER.
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="Ejercicios/InfluencerDineroRepartir.php" method="post" class="formulario">
+                  <div class="formulario-contenedor">
+                    <label class="formulario-label" for="monto">
+                      Cuanto Dinero Dispone para Repartir:
+                    </label>
+                    <input class="formulario-input" type="number"  name="monto" required/>
+                
+                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                  </div>
+                </form>
+              </div>
+            </p>
           </div>
+      </div>
 
         
     </main>
