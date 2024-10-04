@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios PHP </title>
+
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="text-center">Ejercicios PHP </h2>
+    </header>
+
+    <main>
+        <div id="ejemplo1">
+          <h1 class="ejercicio-titulo">EJERCICIO 1</h1>
+          <div >
+            <p>
+                Dado 20 números en un arreglo, imprimir cuantos son positivos, cuantos negativos 
+                y cuantos neutros.
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="Ejercicios/NumerosPositivosNegativosNeutros.php" method="post" class="formulario">
+                  <div class="formulario-contenedor">
+                    <label class="formulario-label" for="cantidad">
+                      Ingrese Cantidad de Números (Por Defecto = 20)
+                    </label>
+                    <input class="formulario-input" type="number"  name="cantidad" required/>
+
+                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                  </div>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
+
+        <div id="ejemplo2">
+            <h1 class="ejercicio-titulo">EJERCICIO 2</h1>
+            <div >
+              <p>
+                Dado un arreglo con 20 edades de personas, determinar cuántos son niños, jóvenes, 
+                adultos y viejos. Se determinan las categorías con base en la siguiente tabla:
+                <ul>
+                  <li>Niños 0 - 12</li>
+                  <li>Jóvenes 13 - 29 </li>
+                  <li>Adultos 30 - 59</li>
+                  <li>Viejos a partir de 60</li>
+                </ul>
+              </p>
+              <p>
+                <div  class="frame">
+                  <form action="Ejercicios/ClasificarEdades.php" method="post" class="formulario">
+                    <div class="formulario-contenedor">
+                      <label class="formulario-label" for="edades">
+                        Registre las 20 edades:
+                      </label>
+                      <ul>
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[0]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[1]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[2]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[3]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[4]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[5]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[6]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[7]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[8]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[9]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[10]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[11]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[12]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[13]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[14]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[15]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[16]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[17]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[18]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[19]" required/>
+                          </li> 
+                      </ul>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                    </div>
+                  </form>
+                </div>
+              </p>
+            </div>
+        </div>
+
+        <div id="ejemplo3">
+            <h1 class="ejercicio-titulo">EJERCICIO 3</h1>
+            <div >
+              <p>
+                Encontrar el número mayor de un arreglo
+              </p>
+              <p>
+                <div  class="frame">
+                  <form action="EncontrarNumeroMayor.php" method="post" class="formulario">
+                    <div class="formulario-contenedor">
+                        <label class="formulario-label" for="num1">
+                            Solo presione el botón para ver el resultado
+                        </label>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Calcular" />
+                    </div>
+                  </form>
+                </div>
+              </p>
+            </div>
+          </div>
+
+        
+    </main>
+</body>
+</html>
