@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios PHP | Matrices </title>
+
+    <link rel="stylesheet" href="Estilos/bulma.css" />
+    <link rel="stylesheet" href="Estilos/custom.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="text-center">Ejercicios PHP Matrices </h2>
+    </header>
+
+    <main>
+        <div id="ejercicio1">
+          <h1 class="ejercicio-titulo">EJERCICIO 1 | Simulador de Bingo 📅 ✔  </h1>
+          <div >
+            <p>
+                Realice un programa que dado una Matriz 5x5, la llene con números aleatorio (entre 1 y 90). Inicie un proceso de 
+                "Cantar" números, es decir, generar números aleatorios para que vaya "marcando" los números que se
+                encuentre en el cartón. Finalmente se detiene cuando el número de aciertos haya llegado a <strong>N</strong>, donde 
+                <strong>N</strong> es dado por el usuario.
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="Scripts/BingoSimulador.php" method="post" class="formulario">
+                  <div class="field formulario-contenedor">
+                    <label class="formulario-label" for="cantAciertos">
+                      Cantidad de Números de Aciertos Requeridos (min:5 - max:25)
+                    </label>
+                    <div class="control is-flex is-justify-content-center">
+                      <input class="formulario-input" type="number" value=5 min="5" max="25" step="1" id="cantAciertos" name="cantAciertos" />
+                    </div>
+                  </div>
+                  <!-- <div class="field formulario-contenedor">
+                    <label class="formulario-label" for="cantMatriz">
+                      Cantidad de Matriz (min:1 - max:4)
+                    </label>
+                    <div class="control is-flex is-justify-content-center">
+                      <input class="formulario-input" type="number" value=1 min="1" max="4" step="1" id="cantMatriz" name="cantMatriz"/>
+                    </div>
+                  </div> -->
+                  <div class="field is-flex is-justify-content-center">
+                    <input class="button is-link is-light" type="submit" value="Ejecutar" />
+                  </div>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
+
+        <div id="ejercicio2">
+            <h1 class="ejercicio-titulo">EJERCICIO 2</h1>
+            <div >
+              <p>
+                Dado un arreglo con 20 edades de personas, determinar cuántos son niños, jóvenes, 
+                adultos y viejos. Se determinan las categorías con base en la siguiente tabla:
+                <ul>
+                  <li>Niños 0 - 12</li>
+                  <li>Jóvenes 13 - 29 </li>
+                  <li>Adultos 30 - 59</li>
+                  <li>Viejos a partir de 60</li>
+                </ul>
+              </p>
+              <p>
+                <div  class="frame">
+                  <form action="Ejercicios/ClasificarEdades.php" method="post" class="formulario">
+                    <div class="formulario-contenedor">
+                      <label class="formulario-label" for="edades">
+                        Registre las 20 edades:
+                      </label>
+                      <ul>
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[0]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[1]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[2]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[3]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[4]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[5]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[6]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[7]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[8]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[9]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[10]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[11]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[12]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[13]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[14]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[15]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[16]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[17]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[18]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="edades[19]" required/>
+                          </li> 
+                      </ul>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                    </div>
+                  </form>
+                </div>
+              </p>
+            </div>
+        </div>
+
+        <div id="ejercicio3">
+            <h1 class="ejercicio-titulo">EJERCICIO 3</h1>
+            <div >
+              <p>
+                Dado un arreglo con 20 calificaciones de un grupo de alumnos. Calcule y escriba el porcentaje de reprobados. 
+                Tomando en cuenta que la calificación mínima aprobatoria es de 70.
+              </p>
+              <p>
+                <div  class="frame">
+                  <form action="Ejercicios/CalificacionesAlumnos.php" method="post" class="formulario">
+                    <div class="formulario-contenedor">
+                      <label class="formulario-label" for="notas">
+                        Registre las 20 notas:
+                      </label>
+                      <ul>
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[0]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[1]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[2]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[3]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[4]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[5]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[6]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[7]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[8]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[9]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[10]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[11]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[12]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[13]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[14]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[15]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[16]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[17]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[18]" required/>
+                          </li> 
+                          <li>
+                            <input class="formulario-input" type="number"  name="notas[19]" required/>
+                          </li> 
+                      </ul>
+                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                    </div>
+                  </form>
+                </div>
+              </p>
+            </div>
+        </div>
+
+        <div id="ejercicio4">
+          <h1 class="ejercicio-titulo">EJERCICIO 4</h1>
+          <div >
+            <p>
+              Un INFLUENCER dispone de una cantidad de euros que quiere repartir a un conjunto de personas. 
+              A cada persona le da una cantidad de dinero proporcional a la edad de la misma. Por ejemplo, 
+              si una persona tiene 17 años recibirá € 170 y si tiene 32 años recibirá € 320. 
+              Genere la edad de manera aleatoria entre 1 y 100.
+              Escribir un programa que devuelva el número de personas que podrán recibir una cantidad de dinero. 
+              Cuando la cantidad de dinero ya no es suficiente para dársela a una persona, suponemos que 
+              no existen más personas y que por tanto el programa finaliza y nos dice cuánto dinero le 
+              quedó al INFLUENCER.
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="Ejercicios/InfluencerDineroRepartir.php" method="post" class="formulario">
+                  <div class="formulario-contenedor">
+                    <label class="formulario-label" for="monto">
+                      Cuanto Dinero Dispone para Repartir:
+                    </label>
+                    <input class="formulario-input" type="number"  name="monto" required/>
+                
+                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                  </div>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
+
+        <div id="ejercicio5">
+          <h1 class="ejercicio-titulo">EJERCICIO 5</h1>
+          <div >
+            <p>
+              En una empresa se requiere calcular el salario semanal de cada uno de los n obreros que laboran en ella. 
+              Los nombres están en un arreglo y Las horas están en otro. (Arreglos paralelas)
+              El salario se obtiene de la siguiente forma: 
+                * Si el obrero trabaja 40 horas o menos se le paga Bs. 20 por hora. 
+                * Si trabaja más de 40 horas se le paga Bs. 20 por cada una de las primeras 40 horas y Bs. 25 por cada hora extra. 
+              
+                Imprime el nombre de cada trabajador y cuánto va a cobrar.
+            </p>
+            <p>
+              <div  class="frame">
+                <form action="Ejercicios/CalcularSalarioTrabajadores.php" method="post" class="formulario">
+                  <div class="formulario-contenedor">
+                    <p>
+                    <label class="formulario-label"></label>
+                      Ingrese Valor de Cada Hora Trabajada (en Bs.):
+                    </label>
+                    <input class="formulario-input" type="number"  name="valorXHora" required/>
+                  </p>
+                    <label class="formulario-label">
+                      Ingrese Nombres y las Horas Trabajas en la Semana:
+                    </label>
+                    <ul>
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[0]" required/>
+                          <input class="formulario-input" type="number"  name="horas[0]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[1]" required/>
+                          <input class="formulario-input" type="number"  name="horas[1]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[2]" required/>
+                          <input class="formulario-input" type="number"  name="horas[2]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[3]" required/>
+                          <input class="formulario-input" type="number"  name="horas[3]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[4]" required/>
+                          <input class="formulario-input" type="number"  name="horas[4]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[5]" required/>
+                          <input class="formulario-input" type="number"  name="horas[5]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[6]" required/>
+                          <input class="formulario-input" type="number"  name="horas[6]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[7]" required/>
+                          <input class="formulario-input" type="number"  name="horas[7]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[8]" required/>
+                          <input class="formulario-input" type="number"  name="horas[8]" required/>
+                        </li> 
+                        <li>
+                          <input class="formulario-input" type="text"  name="nombres[9]" required/>
+                          <input class="formulario-input" type="number"  name="horas[9]" required/>
+                        </li> 
+                        
+                    </ul>
+                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                  </div>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
+        
+    </main>
+</body>
+</html>
