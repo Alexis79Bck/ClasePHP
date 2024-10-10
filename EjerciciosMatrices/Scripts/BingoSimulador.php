@@ -4,17 +4,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     function generarMatriz(): array
     {
-        $matriz =[];
-        for ($i=0; $i < 5 ; $i++) { 
-            for ($j=0; $j < 5 ; $j++) { 
+        $matriz = [];
+        for ($i = 0; $i < 5; $i++) {
+            for ($j = 0; $j < 5; $j++) {
                 $matriz[$i][$j] = rand(1, 90);
             }
         }
-        
+
         return $matriz;
     }
 
-    function obtenerNumeroAleatorio(): int{
+    function obtenerNumeroAleatorio(): int
+    {
         return rand(1, 90);
     }
 
@@ -23,34 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $numeroMatriz === $numeroCantado;
     }
 
-    function marcadoNumeroAcertado(int $numeroMatriz): string  
-    {
-        return "X $numeroMatriz X";
-    }
-
-    function iniciarBingo(array $matriz)
-    {
-        do {
-            $contarNumerosAleatorios = 0;
-            $contarNumerosAcertados = 0;
-    
-            foreach ($matriz as $fila) {
-                foreach ($fila as $numero) {
-                    $cantado
-                }
-            }            
-        } while ($contarNumerosAcertados <= $_POST['cantAciertos']);
-    }
-
-    function showResultados(string $clasificacion, int $total): void
-    {
-        echo "<br />";
-        echo "El porcentaje de alumnos $clasificacion es $total %";
-        echo "<br />";
-    }
-    
     
 
+
+
+
+
+    $matriz =  generarMatriz();
 }
 
 ?>
@@ -68,27 +48,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="max-width">
-    <header class="container">
+    <header>
         <h2 class="text-center">Simulador de Bingo</h2>
     </header>
 
-    <main>
-        <a href="../index.html">Regresar</a>
-        <div class="container grid">
-            <?php
-                $matriz =  generarMatriz();
-                $contadorAcierto = 0;
-                $contarNumerosAleatorios = 0;
-
-            ?>
-            <div class="cell">
-
-                <blockquote class="quote-box quote-left-border">
-                   
-                </blockquote>
-
-            </div>
+    <main class="container">
+        <a class="button is-link has-text-primary-25 has-background-info-70" href="../index.html">Regresar</a>
+        <div class="is-flex is-flex-direction-column">
+            <h2 class='is-size-3 has-text-primary has-text-centered is-family-primary has-text-weight-bold'>Matriz 5 x 5</h2>
         </div>
+
+        <div class="grid is-col-min-8">
+            <?php
+            $contarAciertos = 0;
+            $cantado = obtenerNumeroAleatorio();
+            do {
+                foreach ($matriz as $fila) {
+                    foreach ($fila as $numero) {
+    
+                        echo "<div class='cell'>";
+                        if (numeroAcertadoEnMatriz($numero, $cantado)) {
+                            echo "<div class='box has-background-success-80 has-text-black has-text-centered '>";
+                            echo "<span class='is-size-4 is-family-monospace has-text-weight-bold'> $numero </span>";
+                            echo "</div>";
+
+                        } else {
+                            echo "<div class='box has-text-black has-text-centered '>";
+                            echo "<span class='is-size-4 is-family-monospace'> $numero </span>";
+                            echo "</div>";
+                        }
+                        echo "</div>";
+                    }
+                }
+                
+            } while ($contarAciertos <= $_POST['cantAciertos']);
+            ?>
+        </div>
+
     </main>
 </body>
 
