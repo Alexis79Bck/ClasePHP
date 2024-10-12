@@ -126,46 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
 
-            // foreach ($resultado['resultado'] as $numero) { 
-                // if ($numero['fueAcertado']) {
-                //     echo "<div class='cell'>";
-                //     echo "<div class='box has-text-dark has-text-centered '>";
-                //     echo "<span class='is-size-5 is-family-monospace has-text-weight-bold'>";
-                //     echo $numero['numero'];
-                //     echo "</span>";
-                //     echo "</div>";
-                //     echo "</div>";
-                // }else{
-                //     echo "<div class='cell'>";
-                //     echo "<div class='box has-background-success-80 has-text-success-10 has-text-centered '>";
-                //     echo "<span class='is-size-5 is-family-monospace has-text-weight-bold'>";
-                //     echo $numero['numero'];
-                //     echo "</span>";
-                //     echo "</div>";
-                //     echo "</div>";
-                // }
-            // }
+
             ?>
         </div>
-        <!-- 
-                //     foreach ($fila as $numero) {
-    
-                //         echo "<div class='cell'>";
-                //         if (numeroAcertadoEnMatriz($numero, $cantado)) {
-                //             echo "<div class='box has-background-success-80 has-text-black has-text-centered '>";
-                //             echo "<span class='is-size-4 is-family-monospace has-text-weight-bold'> $numero </span>";
-                //             echo "</div>";
-
-                //         } else {
-                //             echo "<div class='box has-text-black has-text-centered '>";
-                //             echo "<span class='is-size-4 is-family-monospace'> $numero </span>";
-                //             echo "</div>";
-                //         }
-                //         echo "</div>";
-                //     }
-                // } -->
-
-
 
     </main>
 </body>
