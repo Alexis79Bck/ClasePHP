@@ -15,7 +15,7 @@
     </header>
 
     <main>
-        <div id="ejercicio1">
+        <div id="ejercicio1" class="mb-5">
           <h1 class="ejercicio-titulo">EJERCICIO 1 | Simulador de Bingo 📅 ✔  </h1>
           <div >
             <p>
@@ -24,7 +24,7 @@
                 encuentre en el cartón. Finalmente se detiene cuando el número de aciertos haya llegado a <strong>N</strong>, donde 
                 <strong>N</strong> es dado por el usuario.
             </p>
-            <p>
+            <p class="mt-5 mb-3">
               <div  class="frame">
                 <form action="Scripts/BingoSimulador.php" method="post" class="formulario">
                   <div class="field formulario-contenedor">
@@ -35,14 +35,7 @@
                       <input class="formulario-input" type="number" value=5 min="5" max="25" step="1" id="cantAciertos" name="cantAciertos" />
                     </div>
                   </div>
-                  <!-- <div class="field formulario-contenedor">
-                    <label class="formulario-label" for="cantMatriz">
-                      Cantidad de Matriz (min:1 - max:4)
-                    </label>
-                    <div class="control is-flex is-justify-content-center">
-                      <input class="formulario-input" type="number" value=1 min="1" max="4" step="1" id="cantMatriz" name="cantMatriz"/>
-                    </div>
-                  </div> -->
+
                   <div class="field is-flex is-justify-content-center">
                     <input class="button is-link is-light" type="submit" value="Ejecutar" />
                   </div>
@@ -52,89 +45,41 @@
           </div>
         </div>
 
-        <div id="ejercicio2">
-            <h1 class="ejercicio-titulo">EJERCICIO 2</h1>
+        <div id="ejercicio2" class="mb-5">
+            <h1 class="ejercicio-titulo">EJERCICIO 2 | Adivinar La Secuencia De Colores</h1>
             <div >
-              <p>
-                Dado un arreglo con 20 edades de personas, determinar cuántos son niños, jóvenes, 
-                adultos y viejos. Se determinan las categorías con base en la siguiente tabla:
+              <p>Realice  una version simplificada del juego Adivina la Secuencia de Colores seleccionada al azar por el PC. <br />
+                Especificaciones: <br />
                 <ul>
-                  <li>Niños 0 - 12</li>
-                  <li>Jóvenes 13 - 29 </li>
-                  <li>Adultos 30 - 59</li>
-                  <li>Viejos a partir de 60</li>
+                  <li>
+                    <p>El PC selecionará al azar 3 colores de 5 posibles y sin repeticion (AMARILLO, VERDE, ROJO, AZUL Y NEGRO).</p>
+                  </li>
+                  <li>
+                    <p>El usuario ingresara la secuencia de colores que desee y el programa debe ser capaz de emitir los siguientes mensaje:</p>
+                    <p> * Usted acertó (x) Colores.</p>
+                    <p> * Usted acertó (x) Posicion.</p>
+                  </li>
+                  <li>
+                    <p>Tiene un numero de 5 intentos para acertar los 3 colores en la posicion correcta.</p>
+                  </li>
+                  <li>
+                    <p>En caso de acertar los 3 colores en la posicion correcta en 5 intentos o menos, debe emitir un mensaje USTED HA GANADO. </p> 
+                    <p>De lo contrario emitir un mensaje USTED HA PERDIDO y mostrar la respuesta correcta.</p>
+                  </li>
                 </ul>
               </p>
-              <p>
+              <p class="mt-5 mb-3">
                 <div  class="frame">
-                  <form action="Ejercicios/ClasificarEdades.php" method="post" class="formulario">
-                    <div class="formulario-contenedor">
-                      <label class="formulario-label" for="edades">
-                        Registre las 20 edades:
+                  <form action="Ejercicios/AdivinaSecuenciaColores.php" method="post" class="formulario">
+                    <div class="field formulario-contenedor has-text-centered">
+                      <label class="formulario-label" for="cantAciertos">
+                        Haga Click en el Boton
                       </label>
-                      <ul>
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[0]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[1]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[2]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[3]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[4]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[5]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[6]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[7]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[8]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[9]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[10]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[11]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[12]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[13]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[14]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[15]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[16]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[17]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[18]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="edades[19]" required/>
-                          </li> 
-                      </ul>
-                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
+                      
+                    </div>
+  
+                    <div class="field is-flex is-justify-content-center">
+                      <input class="button is-link is-light" type="submit" value="A Jugar" />
                     </div>
                   </form>
                 </div>
