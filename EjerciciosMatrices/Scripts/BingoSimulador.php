@@ -2,18 +2,24 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    function generarMatriz(): array
+    function generarMatrizBingo(): array
     {
         $matriz = [];
-        for ($i = 0; $i < 5; $i++) {
-            for ($j = 0; $j < 5; $j++) {
-                $matriz[$i][$j]['numero'] = rand(1, 90);
-                $matriz[$i][$j]['fueAcertado'] = false;
+        while (count($matriz) < 25) {
+            $numero = obtenerNumeroAleatorio();
+            if (! in_array($numero, $matriz)) {
+                $matriz[] = $numero;
             }
         }
+        
+        return array_chunk($matriz, 5);
+    }
 
+    function generarMatrizMarcador(): array
+    {
+        $matriz = array_fill(0, 25, false);
+        return array_chunk($matriz, 5);
 
-        return $matriz;
     }
 
     function obtenerNumeroAleatorio(): int
@@ -28,34 +34,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     function ejecutar(array $matriz, int $cantidadAciertos): array
     {
+        $numerosCantados = [];
         $aciertos = 0;
-        $x = 0;
-        
-        do {
-            $numerosCantados[$x] = obtenerNumeroAleatorio();
+        $marcador = generarMatrizMarcador();
 
-            for ($i = 0; $i < 5; $i++) {
-                for ($j = 0; $j < 5; $j++) {
+        while ($aciertos < $cantidadAciertos) {
+            $numeroCantado = obtenerNumeroAleatorio();
+            while (in_array( $numeroCantado, $numerosCantados)) {
+                $numeroCantado = obtenerNumeroAleatorio();
+            }
 
-                    if (numeroAcertadoEnMatriz($matriz[$i][$j]['numero'], $numerosCantados[$x]) ) {
-                        $matriz[$i][$j]['fueAcertado'] = true; 
-                        $aciertos++;                        
+            $numerosCantados[] = $numeroCantado;
+
+            foreach ($matriz as $f => $fila) {
+                foreach ($fila as $c => $numero) {
+                    if ($numero == $numeroCantado) {
+                        $marcador[$f][$c] = true;
+                        $aciertos++;
+                        break 2;
                     }
-
                     
                 }
             }
-            
-            $x++;
-        } while ($aciertos <= $cantidadAciertos);
+        }
+
 
         return [
             'numerosCantados' => $numerosCantados,
-            'resultado' => $matriz
+            'resultado' => $marcador
         ];
     }
 
-    $matriz =  generarMatriz();
+    $matriz =  generarMatrizBingo();
 
     $resultado = ejecutar($matriz, $_POST['cantAciertos']);
 }
@@ -99,18 +109,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="mt-4 mb-4 is-flex is-flex-direction-column">
             <h2 class='is-size-3 has-text-primary has-text-centered is-family-primary has-text-weight-bold'>Matriz 5x5</h2>
         </div>
+        <?php 
+        
+     
+
+        // foreach ($matriz as $f => $fila) {
+
+        //     foreach ($fila as $c => $numero) {
+        //         echo "<br />";
+        //         echo "Matriz (Fila: $f / Columna: $c): / $numero";
+        //         echo "<br />";
+        //         echo "Resultado (Fila: $f / Columna: $c): / " . $resultado['resultado'][$f][$c];
+        //         echo "<br /><hr />";
+        //         // echo "<hr />$numero<br />";
+        //         // echo $resultado[$f][$c] ?   "Numero $numero fue acertado.<br />" : "Numero $numero no fue acertado.<br />";
+        //     }
+        // }
+        ?>
         <div class="grid is-col-min-8">
             <?php
-          
+                
+            foreach ($matriz as $f => $fila) {
+                foreach ($fila as $c => $numero) {
 
-            for ($i = 0; $i < 5; $i++) {
-                for ($j = 0; $j < 5; $j++) {
-
-                    if ($resultado['resultado'][$i][$j]['fueAcertado']) {
+                    if ($resultado['resultado'][$f][$c]) {
                         echo "<div class='cell'>";
                         echo "<div class='box has-background-warning-90  has-text-centered '>";
                         echo "<span class='has-background-danger-80 has-text-danger-10  is-size-5 is-family-monospace has-text-weight-bold'>";
-                        echo $resultado['resultado'][$i][$j]['numero'];
+                        echo $numero;
                         echo "</span>";
                         echo "</div>";
                         echo "</div>";
@@ -118,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         echo "<div class='cell'>";
                         echo "<div class='box has-background-warning-90 has-text-dark has-text-centered '>";
                         echo "<span class='is-size-5 is-family-monospace has-text-weight-bold'>";
-                        echo $resultado['resultado'][$i][$j]['numero'];
+                        echo $numero;
                         echo "</span>";
                         echo "</div>";
                         echo "</div>";
