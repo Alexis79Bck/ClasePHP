@@ -72,7 +72,7 @@
                 <div  class="frame">
                   <form action="Scripts/AdivinaSecuenciaColores.php" method="post" class="formulario">
                     <div class="field formulario-contenedor has-text-centered">
-                      <label class="formulario-label" for="cantAciertos">
+                      <label class="formulario-label">
                         Haga Click en el Boton
                       </label>
                       
@@ -99,185 +99,23 @@
               <p>
                 <div  class="frame">
                   <form action="Scripts/VentasComidaRapidas.php" method="post" class="formulario">
-                    <div class="formulario-contenedor">
-                      <label class="formulario-label" for="notas">
-                        Registre las 20 notas:
-                      </label>
-                      <ul>
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[0]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[1]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[2]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[3]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[4]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[5]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[6]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[7]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[8]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[9]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[10]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[11]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[12]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[13]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[14]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[15]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[16]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[17]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[18]" required/>
-                          </li> 
-                          <li>
-                            <input class="formulario-input" type="number"  name="notas[19]" required/>
-                          </li> 
-                      </ul>
-                      <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
-                    </div>
+                    
+                      <div class="field formulario-contenedor has-text-centered">
+                        <label class="formulario-label">
+                          Haga Click en el Boton
+                        </label>
+                        
+                      </div>
+    
+                      <div class="field is-flex is-justify-content-center">
+                        <input class="button is-link is-light" type="submit" value="HACER PEDIDO" />
+                      </div>
                   </form>
                 </div>
               </p>
             </div>
         </div>
 
-        <div id="ejercicio4">
-          <h1 class="ejercicio-titulo">EJERCICIO 4</h1>
-          <div >
-            <p>
-              Un INFLUENCER dispone de una cantidad de euros que quiere repartir a un conjunto de personas. 
-              A cada persona le da una cantidad de dinero proporcional a la edad de la misma. Por ejemplo, 
-              si una persona tiene 17 años recibirá € 170 y si tiene 32 años recibirá € 320. 
-              Genere la edad de manera aleatoria entre 1 y 100.
-              Escribir un programa que devuelva el número de personas que podrán recibir una cantidad de dinero. 
-              Cuando la cantidad de dinero ya no es suficiente para dársela a una persona, suponemos que 
-              no existen más personas y que por tanto el programa finaliza y nos dice cuánto dinero le 
-              quedó al INFLUENCER.
-            </p>
-            <p>
-              <div  class="frame">
-                <form action="Ejercicios/InfluencerDineroRepartir.php" method="post" class="formulario">
-                  <div class="formulario-contenedor">
-                    <label class="formulario-label" for="monto">
-                      Cuanto Dinero Dispone para Repartir:
-                    </label>
-                    <input class="formulario-input" type="number"  name="monto" required/>
-                
-                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
-                  </div>
-                </form>
-              </div>
-            </p>
-          </div>
-        </div>
-
-        <div id="ejercicio5">
-          <h1 class="ejercicio-titulo">EJERCICIO 5</h1>
-          <div >
-            <p>
-              En una empresa se requiere calcular el salario semanal de cada uno de los n obreros que laboran en ella. 
-              Los nombres están en un arreglo y Las horas están en otro. (Arreglos paralelas)
-              El salario se obtiene de la siguiente forma: 
-                * Si el obrero trabaja 40 horas o menos se le paga Bs. 20 por hora. 
-                * Si trabaja más de 40 horas se le paga Bs. 20 por cada una de las primeras 40 horas y Bs. 25 por cada hora extra. 
-              
-                Imprime el nombre de cada trabajador y cuánto va a cobrar.
-            </p>
-            <p>
-              <div  class="frame">
-                <form action="Ejercicios/CalcularSalarioTrabajadores.php" method="post" class="formulario">
-                  <div class="formulario-contenedor">
-                    <p>
-                    <label class="formulario-label"></label>
-                      Ingrese Valor de Cada Hora Trabajada (en Bs.):
-                    </label>
-                    <input class="formulario-input" type="number"  name="valorXHora" required/>
-                  </p>
-                    <label class="formulario-label">
-                      Ingrese Nombres y las Horas Trabajas en la Semana:
-                    </label>
-                    <ul>
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[0]" required/>
-                          <input class="formulario-input" type="number"  name="horas[0]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[1]" required/>
-                          <input class="formulario-input" type="number"  name="horas[1]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[2]" required/>
-                          <input class="formulario-input" type="number"  name="horas[2]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[3]" required/>
-                          <input class="formulario-input" type="number"  name="horas[3]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[4]" required/>
-                          <input class="formulario-input" type="number"  name="horas[4]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[5]" required/>
-                          <input class="formulario-input" type="number"  name="horas[5]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[6]" required/>
-                          <input class="formulario-input" type="number"  name="horas[6]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[7]" required/>
-                          <input class="formulario-input" type="number"  name="horas[7]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[8]" required/>
-                          <input class="formulario-input" type="number"  name="horas[8]" required/>
-                        </li> 
-                        <li>
-                          <input class="formulario-input" type="text"  name="nombres[9]" required/>
-                          <input class="formulario-input" type="number"  name="horas[9]" required/>
-                        </li> 
-                        
-                    </ul>
-                    <input class="formulario-boton-ejecutar" type="submit" value="Ejecutar" />
-                  </div>
-                </form>
-              </div>
-            </p>
-          </div>
-        </div>
         
     </main>
 </body>
